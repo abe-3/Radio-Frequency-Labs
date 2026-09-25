@@ -1,5 +1,5 @@
 % Constants
-t = linspace(0, 100, 5000); % Time in Nano Seconds
+t = linspace(0, 100, 5000); % Time in nanoseconds
 td_BNC12 = 18.288;          % Time Delays of going through once
 td_BNC18 = 27.432;
 Z_shunt = 0;
