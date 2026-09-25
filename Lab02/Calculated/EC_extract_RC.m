@@ -22,8 +22,11 @@ V_open  = interp1(open_data(:,1),  V_open,  freq_MHz, 'linear', 'extrap');
 V_short = interp1(short_data(:,1), V_short, freq_MHz, 'linear', 'extrap');
 
 % 50-ohm source divider: V/V_open = Z/(Z0+Z)  ->  Z = Z0*r/(1-r)
-r_load  = V_load  ./ V_open;   Z_tee   = Z0 * r_load  ./ (1 - r_load);
-r_short = V_short ./ V_open;   Z_leads = Z0 * r_short ./ (1 - r_short);
+r_load  = V_load  ./ V_open;   
+Z_tee   = Z0 * r_load  ./ (1 - r_load);
+
+r_short = V_short ./ V_open;   
+Z_leads = Z0 * r_short ./ (1 - r_short);
 
 Z_load    = Z_tee - Z_leads;
 Gamma_load = (Z_load - Z0) ./ (Z_load + Z0);
