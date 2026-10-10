@@ -63,7 +63,7 @@ function Output = PlotMagPhaseSmith(bUseCorrectionFactor)
 
         CurrentTile = nexttile;
         title(DataName);
-        SmithPlot = smithplot(CurrentTile, Gamma, 'Color', Colors(FileIndex, :));
+        SmithPlot = smithplot(CurrentTile, Gamma, 'Color', Colors(FileIndex, :), 'MarkerSize', 15, 'Marker', '.');
         SmithPlot.TitleTop = DataName;
         SmithPlot.TitleTopFontSizeMultiplier = 2.5;
     end
